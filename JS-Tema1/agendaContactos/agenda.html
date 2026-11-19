@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<title>UD1 DOM - Agenda de contactos</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="style/formulario.css" />
+		<script src="js/contacto.js"></script>
+		<script src="js/formulario.js"></script>
+	</head>
+
+	<body>
+		<h1>Agenda de contactos</h1>
+		<form id="formulario">
+
+			<!-- div informacion (oculto al principio) -->
+			<div id="informacion" class="linea_formulario"></div>
+
+			<!-- campo texto Nombre -->
+			<div class="linea_formulario">
+				<label for="nombre">Nombre</label>
+				<input type="text" name="nombre" id="nombre" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- campo texto Teléfono -->
+			<div class="linea_formulario">
+				<label for="telefono">Teléfono</label>
+				<input type="text" name="telefono" id="telefono" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- campo texto Email (opcional) -->
+			<div class="linea_formulario">
+				<label for="email">Email</label>
+				<input type="text" name="email" id="email" placeholder="(opcional)" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- campo SELECT grupo -->
+			<div class="linea_formulario">
+				<label for="grupo">Grupo</label>
+				<select name="grupo" id="grupo">
+					<option value="familia">Familia</option>
+					<option value="amigos">Amigos</option>
+					<option value="trabajo">Trabajo</option>
+					<option selected value="otros">Otros</option>
+				</select>
+				<div class="limpia"></div>
+			</div>
+
+			<!-- campo CHECKBOX favorito -->
+			<div class="linea_formulario">
+				<label for="favorito">Favorito</label>
+				<input type="checkbox" name="favorito" id="favorito" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- botones -->
+			<div class="linea_formulario">
+				<input type="button" id="anadir" value="Añadir contacto" />
+				<input type="button" id="vaciar" value="Vaciar agenda" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- campo texto Buscar -->
+			<div class="linea_formulario">
+				<label for="buscar">Buscar</label>
+				<input type="text" name="buscar" id="buscar" placeholder="Escribe parte de un nombre" />
+				<div class="limpia"></div>
+			</div>
+
+			<!-- div listado: aquí irá la lista <ul> de contactos -->
+			<div id="listado" class="linea_formulario">
+				<p>La agenda está vacía</p>
+			</div>
+
+			<!-- contador -->
+			<p id="contador"></p>
+
+		</form>
+	</body>
+</html>
